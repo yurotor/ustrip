@@ -1,0 +1,1743 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NYC Bar Mitzvah Trip · June 18–28, 2026</title>
+<meta name="description" content="A 10-day father-and-son itinerary in New York City for the FIFA World Cup 2026." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F4EEE2;
+    --paper-deep: #ECE4D2;
+    --ink: #0E1A24;
+    --ink-soft: #3E4B57;
+    --ink-faded: #7B8590;
+    --orange: #C84A2E;
+    --orange-soft: #E07C5C;
+    --blue: #1B3A7B;
+    --blue-soft: #2B5BAF;
+    --gold: #B8862F;
+    --green: #2D6A4F;
+    --rule: rgba(14, 26, 36, 0.12);
+    --rule-strong: rgba(14, 26, 36, 0.25);
+    --display: 'Fraunces', 'Times New Roman', serif;
+    --body: 'Outfit', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-weight: 400;
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    background-image:
+      radial-gradient(circle at 12% 8%, rgba(200, 74, 46, 0.04) 0%, transparent 30%),
+      radial-gradient(circle at 88% 92%, rgba(27, 58, 123, 0.04) 0%, transparent 30%);
+    background-attachment: fixed;
+  }
+
+  /* paper texture noise */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.4;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='5'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.05 0 0 0 0 0 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ============ NAVIGATION ============ */
+  nav.daynav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(244, 238, 226, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule);
+    padding: 12px 0;
+  }
+  nav.daynav .nav-scroll {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 0 24px;
+  }
+  nav.daynav .nav-scroll::-webkit-scrollbar { display: none; }
+  nav.daynav a {
+    flex-shrink: 0;
+    text-decoration: none;
+    color: var(--ink-soft);
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    padding: 6px 10px;
+    border-radius: 2px;
+    transition: all 0.2s;
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+  nav.daynav a:hover { background: var(--ink); color: var(--paper); }
+  nav.daynav a.match { color: var(--orange); font-weight: 700; }
+  nav.daynav a.match:hover { background: var(--orange); color: var(--paper); }
+
+  /* ============ HEADER ============ */
+  header.hero {
+    padding: 80px 0 40px;
+    border-bottom: 2px solid var(--ink);
+    position: relative;
+  }
+  .kicker {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .kicker::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+  header.hero h1 {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: clamp(56px, 11vw, 128px);
+    line-height: 0.88;
+    letter-spacing: -0.04em;
+    margin-bottom: 24px;
+    font-variation-settings: "opsz" 144;
+  }
+  header.hero h1 .accent {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--orange);
+  }
+  .hero-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+  }
+  .meta-item .label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-bottom: 6px;
+  }
+  .meta-item .value {
+    font-family: var(--display);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  /* ============ SECTIONS ============ */
+  section {
+    padding: 64px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  h2.section-title {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 1;
+    letter-spacing: -0.025em;
+    margin-bottom: 8px;
+    font-variation-settings: "opsz" 96;
+  }
+  h2.section-title .num {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--orange);
+    display: block;
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+  .section-intro {
+    color: var(--ink-soft);
+    font-size: 17px;
+    max-width: 60ch;
+    margin-bottom: 40px;
+    line-height: 1.7;
+  }
+
+  /* ============ PRE-PURCHASE CHECKLIST ============ */
+  .checklist {
+    display: grid;
+    gap: 12px;
+  }
+  .checklist-group {
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 24px;
+  }
+  .checklist-group h3 {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+  .checklist-group.urgent { border-left: 4px solid var(--orange); }
+  .checklist-group.urgent h3 { color: var(--orange); }
+  .checklist-group.soon { border-left: 4px solid var(--gold); }
+  .checklist-group.soon h3 { color: var(--gold); }
+  .checklist-group.later { border-left: 4px solid var(--green); }
+  .checklist-group.later h3 { color: var(--green); }
+  .checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    border-top: 1px dashed var(--rule);
+  }
+  .checklist-item:first-of-type { border-top: 0; padding-top: 0; }
+  .checklist-item input[type="checkbox"] {
+    margin-top: 4px;
+    width: 16px;
+    height: 16px;
+    accent-color: var(--orange);
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .checklist-text { flex: 1; }
+  .checklist-text strong { font-weight: 600; }
+  .checklist-text a {
+    color: var(--blue);
+    text-decoration: none;
+    border-bottom: 1px solid var(--blue);
+    transition: opacity 0.2s;
+  }
+  .checklist-text a:hover { opacity: 0.6; }
+  .checklist-text .meta {
+    display: block;
+    font-size: 13px;
+    color: var(--ink-faded);
+    margin-top: 2px;
+  }
+
+  /* ============ DAY CARDS ============ */
+  .day {
+    margin-bottom: 80px;
+    scroll-margin-top: 80px;
+  }
+  .day-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 32px;
+    align-items: end;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid var(--ink);
+  }
+  .day-number {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: clamp(80px, 14vw, 160px);
+    line-height: 0.8;
+    letter-spacing: -0.05em;
+    color: var(--ink);
+    font-variation-settings: "opsz" 144;
+  }
+  .day-info { padding-bottom: 12px; }
+  .day-date {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-bottom: 8px;
+  }
+  .day-theme {
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(24px, 3.5vw, 36px);
+    line-height: 1.1;
+    color: var(--ink);
+  }
+
+  /* match-day variant */
+  .day.match-day .day-header { border-bottom-color: var(--orange); }
+  .day.match-day .day-number { color: var(--orange); }
+  .day.match-day .day-theme::before {
+    content: '⚽ ';
+    font-style: normal;
+  }
+
+  .day-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  /* schedule rows */
+  .schedule {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 0;
+  }
+  .schedule-row {
+    display: contents;
+  }
+  .schedule-time {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    padding: 16px 16px 16px 0;
+    border-top: 1px solid var(--rule);
+    text-align: right;
+  }
+  .schedule-time.key {
+    color: var(--orange);
+    font-weight: 700;
+  }
+  .schedule-event {
+    padding: 16px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .schedule-event strong {
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .schedule-event.key strong {
+    color: var(--orange);
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.2;
+  }
+  .schedule-event .detail {
+    color: var(--ink-soft);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .schedule-event .detail a {
+    color: var(--blue);
+    text-decoration: none;
+    border-bottom: 1px solid var(--blue);
+  }
+  .schedule-event .detail a:hover { opacity: 0.6; }
+
+  .day-meta {
+    margin-top: 32px;
+    padding: 20px;
+    background: var(--paper-deep);
+    border-radius: 4px;
+    border-left: 3px solid var(--blue);
+  }
+  .day-meta h4 {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+  .day-meta p {
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.5;
+    margin-bottom: 6px;
+  }
+  .day-meta p:last-child { margin-bottom: 0; }
+  .day-meta strong { font-weight: 600; }
+
+  /* ============ KICKOFF BANNER ============ */
+  .kickoff-banner {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 24px 28px;
+    margin: 24px 0;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: center;
+  }
+  .kickoff-banner .label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--orange-soft);
+    margin-bottom: 6px;
+  }
+  .kickoff-banner .teams {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.1;
+    font-style: italic;
+  }
+  .kickoff-banner .time {
+    font-family: var(--display);
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    font-variation-settings: "opsz" 144;
+  }
+
+  /* ============ BUDGET TABLE ============ */
+  .budget-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+  }
+  .budget-table td {
+    padding: 14px 0;
+    border-bottom: 1px dashed var(--rule);
+    font-size: 15px;
+  }
+  .budget-table td:last-child {
+    text-align: right;
+    font-family: var(--mono);
+    font-weight: 500;
+  }
+  .budget-table tr.total td {
+    border-bottom: none;
+    border-top: 2px solid var(--ink);
+    padding-top: 18px;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: var(--display);
+  }
+  .budget-table tr.total td:last-child {
+    font-family: var(--display);
+    color: var(--orange);
+  }
+
+  /* ============ BACKUP CARDS ============ */
+  .backups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .backup-card {
+    background: var(--paper-deep);
+    padding: 20px;
+    border-radius: 4px;
+    border-left: 3px solid var(--gold);
+  }
+  .backup-card h4 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+  .backup-card .when {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-bottom: 10px;
+  }
+  .backup-card .cost {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  /* ============ REFERENCE GRID ============ */
+  .reference {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+  }
+  .ref-card {
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 24px;
+  }
+  .ref-card h4 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: var(--orange);
+  }
+  .ref-card p {
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.55;
+    margin-bottom: 8px;
+  }
+  .ref-card p:last-child { margin-bottom: 0; }
+  .ref-card strong { font-weight: 600; }
+  .ref-card .mono {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--blue);
+  }
+
+  /* ============ FOOTER ============ */
+  footer {
+    padding: 60px 0 80px;
+    text-align: center;
+    border-top: 2px solid var(--ink);
+    margin-top: 60px;
+  }
+  footer .stamp {
+    display: inline-block;
+    border: 2px solid var(--orange);
+    color: var(--orange);
+    padding: 12px 24px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 700;
+    transform: rotate(-3deg);
+    margin-bottom: 24px;
+  }
+  footer p {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--ink-soft);
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 640px) {
+    .container { padding: 0 16px; }
+    nav.daynav .nav-scroll { padding: 0 16px; }
+    header.hero { padding: 48px 0 32px; }
+    section { padding: 48px 0; }
+    .day-header {
+      grid-template-columns: 1fr;
+      gap: 8px;
+      align-items: start;
+    }
+    .day-info { padding-bottom: 0; }
+    .schedule {
+      grid-template-columns: 80px 1fr;
+    }
+    .schedule-time {
+      font-size: 11px;
+      padding-right: 12px;
+    }
+    .schedule-event strong { font-size: 15px; }
+    .schedule-event .detail { font-size: 13px; }
+    .kickoff-banner {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .kickoff-banner .time { font-size: 40px; }
+    .hero-meta { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* print friendly */
+  @media print {
+    nav.daynav { display: none; }
+    body { background: white; }
+    body::before { display: none; }
+    .day { page-break-inside: avoid; }
+    section { padding: 24px 0; }
+  }
+
+  /* small decorative touches */
+  .divider-ornament {
+    text-align: center;
+    color: var(--ink-faded);
+    font-family: var(--display);
+    font-size: 24px;
+    margin: 40px 0;
+    letter-spacing: 1em;
+  }
+</style>
+</head>
+<body>
+
+<nav class="daynav">
+  <div class="nav-scroll">
+    <a href="#prep">Prep</a>
+    <a href="#day1">D1·Arrive</a>
+    <a href="#day2">D2·9/11</a>
+    <a href="#day3">D3·Park</a>
+    <a href="#day4">D4·iFLY</a>
+    <a href="#day5" class="match">D5·Match 1</a>
+    <a href="#day6">D6·Rest</a>
+    <a href="#day7">D7·Boxing</a>
+    <a href="#day8">D8·Archery</a>
+    <a href="#day9">D9·Karts</a>
+    <a href="#day10" class="match">D10·Match 2</a>
+    <a href="#day11">D11·Depart</a>
+    <a href="#budget">$</a>
+    <a href="#backups">Backup</a>
+    <a href="#reference">Ref</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- ============ HEADER ============ -->
+  <header class="hero">
+    <div class="kicker">A Father &amp; Son Itinerary · World Cup 2026</div>
+    <h1>New <span class="accent">York</span><br>City.</h1>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <div class="label">Dates</div>
+        <div class="value">June 18–28<br>2026</div>
+      </div>
+      <div class="meta-item">
+        <div class="label">Base</div>
+        <div class="value">338 W 36th St<br>Hell's Kitchen</div>
+      </div>
+      <div class="meta-item">
+        <div class="label">Matches</div>
+        <div class="value">Norway · Senegal<br>Panama · England</div>
+      </div>
+      <div class="meta-item">
+        <div class="label">Days</div>
+        <div class="value">10 Nights<br>11 Days</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ PRE-PURCHASE ============ -->
+  <section id="prep">
+    <h2 class="section-title">
+      <span class="num">§ 01 · BEFORE YOU FLY</span>
+      Bookings &amp; Prep.
+    </h2>
+    <p class="section-intro">Tick these off in order. The orange items can sell out; the gold ones are time-sensitive; the green ones are walk-in friendly but worth pre-paying for the discount.</p>
+
+    <div class="checklist">
+
+      <div class="checklist-group urgent">
+        <h3>Urgent · Book Now</h3>
+        <div class="checklist-item">
+          <input type="checkbox" id="c1" />
+          <label for="c1" class="checklist-text">
+            <strong>NJ Transit FIFA train tickets — both matches</strong>
+            <span class="meta">$98 round-trip × 2 people × 2 matches = $392. Capped at 40,000 per match. Buy in the NJ Transit Mobile App.</span>
+          </label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="c2" />
+          <label for="c2" class="checklist-text">
+            <strong>Top of the Rock — Saturday June 20, sunset slot ~7 PM</strong>
+            <span class="meta"><a href="https://www.topoftherocknyc.com" target="_blank" rel="noopener">topoftherocknyc.com</a> · Sunset slots sell out 2+ weeks ahead.</span>
+          </label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="c3" />
+          <label for="c3" class="checklist-text">
+            <strong>iFLY Indoor Skydiving — Sunday June 21, 11 AM</strong>
+            <span class="meta"><a href="https://www.iflyworld.com/new-york-city" target="_blank" rel="noopener">iflyworld.com</a> · Queens location. Book 2-flight package, ~$90/person.</span>
+          </label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="c4" />
+          <label for="c4" class="checklist-text">
+            <strong>9/11 Memorial &amp; Museum — Friday June 19</strong>
+            <span class="meta"><a href="https://www.911memorial.org" target="_blank" rel="noopener">911memorial.org</a> · Timed entry, ~$33/person.</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="checklist-group soon">
+        <h3>Book 2–3 Weeks Ahead</h3>
+        <div class="checklist-item">
+          <input type="checkbox" id="c5" />
+          <label for="c5" class="checklist-text">
+            <strong>One World Observatory — June 19 afternoon</strong>
+            <span class="meta"><a href="https://oneworldobservatory.com" target="_blank" rel="noopener">oneworldobservatory.com</a></span>
+          </label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="c6" />
+          <label for="c6" class="checklist-text">
+            <strong>SUMMIT One Vanderbilt — June 22 ~1 PM</strong>
+            <span class="meta"><a href="https://summitov.com" target="_blank" rel="noopener">summitov.com</a></span>
+          </label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="c7" />
+          <label for="c7" class="checklist-text">
+            <strong>Intrepid Museum — June 23</strong>
+            <span class="meta"><a href="https://www.intrepidmuseum.org" target="_blank" rel="noopener">intrepidmuseum.org</a></span>
+          </label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="c8" />
+          <label for="c8" class="checklist-text">
+            <strong>Empire State Building combo (86th + 102nd) — June 24 evening</strong>
+            <span class="meta"><a href="https://www.esbnyc.com" target="_blank" rel="noopener">esbnyc.com</a> · ~$79/person</span>
+          </label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="c9" />
+          <label for="c9" class="checklist-text">
+            <strong>Gotham Archery Brooklyn — June 25 morning</strong>
+            <span class="meta"><a href="https://www.got-archery.com" target="_blank" rel="noopener">got-archery.com</a> · 1-hour intro</span>
+          </label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="c10" />
+          <label for="c10" class="checklist-text">
+            <strong>Live Axe — June 25 afternoon</strong>
+            <span class="meta"><a href="https://www.liveaxe.com" target="_blank" rel="noopener">liveaxe.com</a></span>
+          </label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="c11" />
+          <label for="c11" class="checklist-text">
+            <strong>RPM Raceway Jersey City — June 26 morning</strong>
+            <span class="meta"><a href="https://www.rpmraceway.com/jersey-city" target="_blank" rel="noopener">rpmraceway.com/jersey-city</a></span>
+          </label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="c12" />
+          <label for="c12" class="checklist-text">
+            <strong>Post-match dinner — Carmine's or Gallaghers, June 27 ~9 PM</strong>
+            <span class="meta">Book via OpenTable or call directly.</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="checklist-group later">
+        <h3>Days Ahead or Day-Of</h3>
+        <div class="checklist-item">
+          <input type="checkbox" id="c13" />
+          <label for="c13" class="checklist-text">
+            <strong>Mendez Boxing drop-in</strong>
+            <span class="meta">Call 212-924-7242 a week before. Wear athletic shorts + sneakers.</span>
+          </label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="c14" />
+          <label for="c14" class="checklist-text">
+            <strong>Central Park bike rental, Chelsea Piers, Frames Bowling, Pier 26 kayak, Pier 25 mini-golf</strong>
+            <span class="meta">All walk-in. No pre-booking needed.</span>
+          </label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="c15" />
+          <label for="c15" class="checklist-text">
+            <strong>Install apps before flying</strong>
+            <span class="meta">NJ Transit · Uber · Google Maps · WhatsApp · Uber Eats</span>
+          </label>
+        </div>
+        <div class="checklist-item">
+          <input type="checkbox" id="c16" />
+          <label for="c16" class="checklist-text">
+            <strong>Call Israeli credit card company</strong>
+            <span class="meta">Notify of US travel June 18–28 to avoid fraud blocks.</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DAYS ============ -->
+  <section>
+    <h2 class="section-title">
+      <span class="num">§ 02 · THE ITINERARY</span>
+      Day by Day.
+    </h2>
+
+    <!-- ===== DAY 1 ===== -->
+    <div class="day" id="day1">
+      <div class="day-header">
+        <div class="day-number">01</div>
+        <div class="day-info">
+          <div class="day-date">Thursday · June 18</div>
+          <div class="day-theme">Wheels Down.</div>
+        </div>
+      </div>
+      <div class="day-content">
+        <div class="schedule">
+          <div class="schedule-row">
+            <div class="schedule-time">21:25</div>
+            <div class="schedule-event">
+              <strong>Land at JFK</strong>
+              <div class="detail">Israel → New York. Long flight. Be patient at immigration.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">22:30</div>
+            <div class="schedule-event">
+              <strong>Yellow Taxi → Hotel</strong>
+              <div class="detail">Flat rate $70 + tolls + 20% tip = ~$95 all-in. 45–60 min ride. Skip Uber tonight — surge pricing is brutal at late hours.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">23:30</div>
+            <div class="schedule-event">
+              <strong>Check in &amp; eat</strong>
+              <div class="detail">Order Uber Eats from the taxi so food meets you at the lobby. Or walk to Halal Guys (53rd &amp; 6th) — open till 3 AM.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">00:30</div>
+            <div class="schedule-event">
+              <strong>Sleep</strong>
+              <div class="detail">Don't fight the jet lag tomorrow morning.</div>
+            </div>
+          </div>
+        </div>
+        <div class="day-meta">
+          <h4>Backup &amp; Notes</h4>
+          <p>If passport control runs long, plan for landing → in-a-cab in 60–90 min. Yellow taxi line is shorter at night than during the day. <strong>No surge pricing on yellow cabs — flat $70 regardless of hour.</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== DAY 2 ===== -->
+    <div class="day" id="day2">
+      <div class="day-header">
+        <div class="day-number">02</div>
+        <div class="day-info">
+          <div class="day-date">Friday · June 19</div>
+          <div class="day-theme">Reverence &amp; Heights.</div>
+        </div>
+      </div>
+      <div class="day-content">
+        <div class="schedule">
+          <div class="schedule-row">
+            <div class="schedule-time">10:30</div>
+            <div class="schedule-event">
+              <strong>Leave hotel · breakfast nearby</strong>
+              <div class="detail">Sleep in. Late start to recover from the flight.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">11:00</div>
+            <div class="schedule-event">
+              <strong>Subway 1 train → WTC Cortlandt</strong>
+              <div class="detail">~20 min ride. Tap your contactless card at the turnstile.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">11:30</div>
+            <div class="schedule-event">
+              <strong>9/11 Memorial fountains</strong>
+              <div class="detail">Free, outdoors. The two giant pools where the Towers stood. Powerful even before the museum.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">12:00</div>
+            <div class="schedule-event">
+              <strong>9/11 Memorial &amp; Museum</strong>
+              <div class="detail">~$33/person. Allow 2.5–3 hours. Heavy but important for a 13-year-old.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">14:30</div>
+            <div class="schedule-event">
+              <strong>Lunch at Eataly Downtown</strong>
+              <div class="detail">Italian food hall, 5-min walk from the museum.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">15:30</div>
+            <div class="schedule-event">
+              <strong>One World Observatory</strong>
+              <div class="detail">Tallest building in the western hemisphere. 90 min. Different perspective from Top of the Rock — looking back AT midtown.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">17:30</div>
+            <div class="schedule-event">
+              <strong>Walk Financial District &amp; Stone Street</strong>
+              <div class="detail">Cute pedestrian-only old street with restaurants. Photo stop.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">18:30</div>
+            <div class="schedule-event">
+              <strong>Subway back to hotel</strong>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">19:30</div>
+            <div class="schedule-event">
+              <strong>Dinner in Hell's Kitchen</strong>
+              <div class="detail">Totto Ramen, Los Tacos No. 1, or anything on 9th Ave.</div>
+            </div>
+          </div>
+        </div>
+        <div class="day-meta">
+          <h4>Backup &amp; Notes</h4>
+          <p>If exhausted, cut Stone Street walk and head straight back. <strong>Both museum and observatory are fully indoor</strong> — rain-proof.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== DAY 3 ===== -->
+    <div class="day" id="day3">
+      <div class="day-header">
+        <div class="day-number">03</div>
+        <div class="day-info">
+          <div class="day-date">Saturday · June 20</div>
+          <div class="day-theme">Park, Pier &amp; Sunset.</div>
+        </div>
+      </div>
+      <div class="day-content">
+        <div class="schedule">
+          <div class="schedule-row">
+            <div class="schedule-time">10:00</div>
+            <div class="schedule-event">
+              <strong>Subway 1 train → Franklin St</strong>
+              <div class="detail">Heading to Pier 26 in Tribeca.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">10:30</div>
+            <div class="schedule-event">
+              <strong>Free kayaking at Pier 26</strong>
+              <div class="detail">20-min sessions, walk-up only, weekends only. Wear clothes that can get wet. Skip if line is over 30 min.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">12:00</div>
+            <div class="schedule-event">
+              <strong>Subway to Columbus Circle</strong>
+              <div class="detail">Lunch at food carts or Time Warner Center.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">13:00</div>
+            <div class="schedule-event">
+              <strong>Bike rental at Columbus Circle</strong>
+              <div class="detail">Two regular bikes, ~$50 for 3 hours. Helmets included.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">13:30</div>
+            <div class="schedule-event">
+              <strong>Central Park loop · ~10 km</strong>
+              <div class="detail">Mostly flat. Stop at Bethesda Fountain, Bow Bridge, Belvedere Castle. Snacks from carts.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">16:30</div>
+            <div class="schedule-event">
+              <strong>Back to hotel, rest</strong>
+              <div class="detail">Shower, recharge before sunset.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">18:30</div>
+            <div class="schedule-event">
+              <strong>Subway B/D → 47–50 Rockefeller</strong>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time key">19:00</div>
+            <div class="schedule-event key">
+              <strong>★ Top of the Rock · sunset</strong>
+              <div class="detail">Three open-air observation decks. Day → sunset → night in 90 min. No glass floor.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">21:00</div>
+            <div class="schedule-event">
+              <strong>Dinner near Rockefeller or Hell's Kitchen</strong>
+            </div>
+          </div>
+        </div>
+        <div class="day-meta">
+          <h4>Backup &amp; Notes</h4>
+          <p>If rain, skip kayaking and bike ride; do Empire State Building during the day and keep Top of the Rock for sunset. <strong>Sunset on June 20 is around 20:30</strong>, so the 19:00 slot is perfect.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== DAY 4 ===== -->
+    <div class="day" id="day4">
+      <div class="day-header">
+        <div class="day-number">04</div>
+        <div class="day-info">
+          <div class="day-date">Sunday · June 21</div>
+          <div class="day-theme">Float &amp; Swing.</div>
+        </div>
+      </div>
+      <div class="day-content">
+        <div class="schedule">
+          <div class="schedule-row">
+            <div class="schedule-time">10:30</div>
+            <div class="schedule-event">
+              <strong>Subway 7 train → Hunters Point Ave</strong>
+              <div class="detail">~15 min to Long Island City, Queens.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time key">11:00</div>
+            <div class="schedule-event key">
+              <strong>★ iFLY Indoor Skydiving</strong>
+              <div class="detail">2-flight package, ~$90/person. Each flight is 60 seconds of true freefall. Total time on-site: 90 min including training.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">13:00</div>
+            <div class="schedule-event">
+              <strong>Lunch at LIC waterfront food halls</strong>
+              <div class="detail">Manhattan skyline views from across the East River.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">15:00</div>
+            <div class="schedule-event">
+              <strong>Cab to Chelsea Piers</strong>
+              <div class="detail">~25 min. Hudson River sports complex.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">15:30</div>
+            <div class="schedule-event">
+              <strong>Chelsea Piers · pick two activities</strong>
+              <div class="detail">Golf driving range (hit balls toward Hudson River targets) + batting cages, OR rock climbing wall. Walk-in pricing.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">19:00</div>
+            <div class="schedule-event">
+              <strong>Cab back to hotel</strong>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">20:30</div>
+            <div class="schedule-event">
+              <strong>Dinner Hell's Kitchen</strong>
+            </div>
+          </div>
+        </div>
+        <div class="day-meta">
+          <h4>Backup &amp; Notes</h4>
+          <p>If iFLY canceled (weather doesn't affect indoor skydiving, but mechanical issues happen), do extra Chelsea Piers activities. <strong>Both venues fully indoor</strong> — rain-proof.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== DAY 5 · MATCH 1 ===== -->
+    <div class="day match-day" id="day5">
+      <div class="day-header">
+        <div class="day-number">05</div>
+        <div class="day-info">
+          <div class="day-date">Monday · June 22 · MATCHDAY</div>
+          <div class="day-theme">Norway v Senegal.</div>
+        </div>
+      </div>
+      <div class="day-content">
+
+        <div class="kickoff-banner">
+          <div>
+            <div class="label">Kickoff · MetLife Stadium</div>
+            <div class="teams">Norway · Senegal</div>
+          </div>
+          <div class="time">20:00</div>
+        </div>
+
+        <div class="schedule">
+          <div class="schedule-row">
+            <div class="schedule-time">10:00</div>
+            <div class="schedule-event">
+              <strong>Sleep in</strong>
+              <div class="detail">Save energy for the long evening.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">11:30</div>
+            <div class="schedule-event">
+              <strong>Brunch at Sarabeth's or Westville</strong>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">13:00</div>
+            <div class="schedule-event">
+              <strong>Subway 7 train → Grand Central</strong>
+              <div class="detail">5 min ride.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">13:30</div>
+            <div class="schedule-event">
+              <strong>SUMMIT One Vanderbilt</strong>
+              <div class="detail">Newest observation deck. Mirrors, reflections, outdoor terrace. ~90 min.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">15:30</div>
+            <div class="schedule-event">
+              <strong>Back to hotel · hydrate, change, rest</strong>
+              <div class="detail">Bring nothing to the stadium. Clear bag policy strict.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time key">17:20</div>
+            <div class="schedule-event key">
+              <strong>★ Leave hotel — walk to Penn Station</strong>
+              <div class="detail">4 blocks south. Aim to be on the platform by 17:30.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time key">17:30–18:00</div>
+            <div class="schedule-event key">
+              <strong>★ Board NJ Transit · Penn Station</strong>
+              <div class="detail">Show mobile ticket. Train → Secaucus → transfer to Meadowlands Rail → stadium.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">18:30</div>
+            <div class="schedule-event">
+              <strong>Arrive MetLife · security &amp; gates</strong>
+              <div class="detail">Eat at the stadium, find your seats, soak in pre-match atmosphere.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time key">20:00</div>
+            <div class="schedule-event key">
+              <strong>★ ⚽ KICKOFF</strong>
+              <div class="detail">Norway vs Senegal · Group I · Match 41.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">22:30</div>
+            <div class="schedule-event">
+              <strong>Match ends · return to hotel</strong>
+              <div class="detail">Reverse route. Expect crowds at the stadium and Secaucus transfer.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">01:00</div>
+            <div class="schedule-event">
+              <strong>Back at hotel · sleep</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-meta">
+          <h4>Backup &amp; Notes</h4>
+          <p><strong>Clear bag policy is strict:</strong> bring nothing, or only a small clear plastic bag. Phones, wallet, keys in pockets only.</p>
+          <p>If SUMMIT runs over, skip it and head straight to Penn earlier — never miss the train. <strong>Match plays in any weather.</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== DAY 6 ===== -->
+    <div class="day" id="day6">
+      <div class="day-header">
+        <div class="day-number">06</div>
+        <div class="day-info">
+          <div class="day-date">Tuesday · June 23</div>
+          <div class="day-theme">Aircraft Carrier.</div>
+        </div>
+      </div>
+      <div class="day-content">
+        <div class="schedule">
+          <div class="schedule-row">
+            <div class="schedule-time">10:00</div>
+            <div class="schedule-event">
+              <strong>Sleep in late</strong>
+              <div class="detail">You earned it. Recovery from the late match.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">12:00</div>
+            <div class="schedule-event">
+              <strong>Brunch in Hell's Kitchen</strong>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">14:00</div>
+            <div class="schedule-event">
+              <strong>Walk west to the Intrepid</strong>
+              <div class="detail">Pier 86, just 10 blocks from the hotel.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">14:30</div>
+            <div class="schedule-event">
+              <strong>Intrepid Sea, Air &amp; Space Museum</strong>
+              <div class="detail">Walk on a real WWII aircraft carrier. Space Shuttle Enterprise. USS Growler submarine. 28 aircraft on the flight deck. ~2.5 hours.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">17:30</div>
+            <div class="schedule-event">
+              <strong>Walk back to hotel</strong>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">19:00</div>
+            <div class="schedule-event">
+              <strong>Easy dinner Hell's Kitchen</strong>
+              <div class="detail">Don't add more activities tonight. Recovery is the point.</div>
+            </div>
+          </div>
+        </div>
+        <div class="day-meta">
+          <h4>Backup &amp; Notes</h4>
+          <p><strong>This day is intentionally light.</strong> Resist the urge to add things. Fatigue catches up by day 5–6.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== DAY 7 ===== -->
+    <div class="day" id="day7">
+      <div class="day-header">
+        <div class="day-number">07</div>
+        <div class="day-info">
+          <div class="day-date">Wednesday · June 24</div>
+          <div class="day-theme">Gloves Up.</div>
+        </div>
+      </div>
+      <div class="day-content">
+        <div class="schedule">
+          <div class="schedule-row">
+            <div class="schedule-time">09:30</div>
+            <div class="schedule-event">
+              <strong>Subway to Mendez Boxing (W 26th St)</strong>
+              <div class="detail">Athletic shorts, t-shirt, sneakers. Bring water.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time key">11:00</div>
+            <div class="schedule-event key">
+              <strong>★ Boxing class at Mendez</strong>
+              <div class="detail">75 min drop-in class, ~$35/person + $5 hand wraps. Real old-school NYC gym since 1995.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">12:30</div>
+            <div class="schedule-event">
+              <strong>Lunch at Chelsea Market</strong>
+              <div class="detail">10-min walk from the gym. Food hall with everything.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">14:00</div>
+            <div class="schedule-event">
+              <strong>5th Avenue walk · start at Bryant Park</strong>
+              <div class="detail">Subway to 42nd St-Bryant Park.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">14:30</div>
+            <div class="schedule-event">
+              <strong>NBA Store → St. Patrick's → Rockefeller → Nike House of Innovation</strong>
+              <div class="detail">All free to enter. Iconic 5th Ave walk.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">17:30</div>
+            <div class="schedule-event">
+              <strong>Empire State Building · 86th + 102nd combo</strong>
+              <div class="detail">~$79/person. Art Deco lobby, construction museum on 80th floor, classic open-air deck on 86th. 90 min.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">19:30</div>
+            <div class="schedule-event">
+              <strong>Dinner Hell's Kitchen</strong>
+            </div>
+          </div>
+        </div>
+        <div class="day-meta">
+          <h4>Backup &amp; Notes</h4>
+          <p>If sore from boxing, cab directly between stops. <strong>Mendez doesn't always take walk-ins</strong> — call 212-924-7242 a week ahead.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== DAY 8 ===== -->
+    <div class="day" id="day8">
+      <div class="day-header">
+        <div class="day-number">08</div>
+        <div class="day-info">
+          <div class="day-date">Thursday · June 25</div>
+          <div class="day-theme">Bows &amp; Axes.</div>
+        </div>
+      </div>
+      <div class="day-content">
+        <div class="schedule">
+          <div class="schedule-row">
+            <div class="schedule-time">09:30</div>
+            <div class="schedule-event">
+              <strong>Subway R train → Union St, Brooklyn</strong>
+              <div class="detail">~30 min.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">10:00</div>
+            <div class="schedule-event">
+              <strong>Gotham Archery Brooklyn · 1-hour intro</strong>
+              <div class="detail">~$30/person. Real bow, real range, real distance.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">11:30</div>
+            <div class="schedule-event">
+              <strong>Subway back to Manhattan</strong>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">12:30</div>
+            <div class="schedule-event">
+              <strong>Lunch at Lombardi's or Nom Wah Tea Parlor</strong>
+              <div class="detail">Oldest pizzeria in America (1905) or oldest dim sum in NYC. Both walk-in.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">14:00</div>
+            <div class="schedule-event">
+              <strong>SoHo wander · cobblestone streets</strong>
+              <div class="detail">Sneaker shops: Kith (Israeli founder), Nike, Stadium Goods. Cast-iron architecture.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">16:00</div>
+            <div class="schedule-event">
+              <strong>Live Axe · ax throwing (Lafayette St)</strong>
+              <div class="detail">~$35/person, 1-hour session. Coach trains you.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">18:00</div>
+            <div class="schedule-event">
+              <strong>Walk SoHo or cab home</strong>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">20:00</div>
+            <div class="schedule-event">
+              <strong>Dinner downtown or Hell's Kitchen</strong>
+            </div>
+          </div>
+        </div>
+        <div class="day-meta">
+          <h4>Backup &amp; Notes</h4>
+          <p>If tired, skip ax throwing and head home. Both archery and ax throwing are indoor — rain-proof.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== DAY 9 ===== -->
+    <div class="day" id="day9">
+      <div class="day-header">
+        <div class="day-number">09</div>
+        <div class="day-info">
+          <div class="day-date">Friday · June 26</div>
+          <div class="day-theme">Pedal to the Floor.</div>
+        </div>
+      </div>
+      <div class="day-content">
+        <div class="schedule">
+          <div class="schedule-row">
+            <div class="schedule-time">10:30</div>
+            <div class="schedule-event">
+              <strong>Uber to RPM Raceway Jersey City</strong>
+              <div class="detail">~25 min, ~$25.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time key">11:00</div>
+            <div class="schedule-event key">
+              <strong>★ Go-karting · 2–3 races + arcade</strong>
+              <div class="detail">~$30/race. Electric karts, indoor track. Real fast.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">14:30</div>
+            <div class="schedule-event">
+              <strong>Uber back to Manhattan</strong>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">16:00</div>
+            <div class="schedule-event">
+              <strong>Mini-golf at Pier 25 (free)</strong>
+              <div class="detail">Hudson River Park, Tribeca. Skip if tired.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">17:30</div>
+            <div class="schedule-event">
+              <strong>Back to hotel, rest</strong>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">19:00</div>
+            <div class="schedule-event">
+              <strong>Dinner Hell's Kitchen</strong>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">21:00</div>
+            <div class="schedule-event">
+              <strong>Frames Bowling · 3 blocks from hotel</strong>
+              <div class="detail">9th Ave &amp; 40th. 1–2 hours, food and drinks available.</div>
+            </div>
+          </div>
+        </div>
+        <div class="day-meta">
+          <h4>Backup &amp; Notes</h4>
+          <p>If exhausted, skip mini-golf AND bowling — just rest before match day. RPM is fully indoor, fine for rain.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== DAY 10 · MATCH 2 ===== -->
+    <div class="day match-day" id="day10">
+      <div class="day-header">
+        <div class="day-number">10</div>
+        <div class="day-info">
+          <div class="day-date">Saturday · June 27 · MATCHDAY</div>
+          <div class="day-theme">Panama v England.</div>
+        </div>
+      </div>
+      <div class="day-content">
+
+        <div class="kickoff-banner">
+          <div>
+            <div class="label">Kickoff · MetLife Stadium</div>
+            <div class="teams">Panama · England</div>
+          </div>
+          <div class="time">17:00</div>
+        </div>
+
+        <div class="schedule">
+          <div class="schedule-row">
+            <div class="schedule-time">10:00</div>
+            <div class="schedule-event">
+              <strong>Sleep in</strong>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">11:00</div>
+            <div class="schedule-event">
+              <strong>Brunch Hell's Kitchen</strong>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">12:30</div>
+            <div class="schedule-event">
+              <strong>Easy walk Times Square · souvenirs</strong>
+              <div class="detail">Save energy. Don't push it.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time key">14:00</div>
+            <div class="schedule-event key">
+              <strong>★ Walk to Penn Station</strong>
+              <div class="detail">4 blocks south.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time key">14:00–15:00</div>
+            <div class="schedule-event key">
+              <strong>★ Board NJ Transit · Penn Station</strong>
+              <div class="detail">Show mobile ticket. Train → Secaucus → Meadowlands Rail → stadium.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">15:30</div>
+            <div class="schedule-event">
+              <strong>Arrive MetLife</strong>
+              <div class="detail">90 min before kickoff — gates open at 15:00. Find seats, food.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time key">17:00</div>
+            <div class="schedule-event key">
+              <strong>★ ⚽ KICKOFF</strong>
+              <div class="detail">Panama vs England.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">19:00</div>
+            <div class="schedule-event">
+              <strong>Match ends · return to Manhattan</strong>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">21:00</div>
+            <div class="schedule-event">
+              <strong>Big celebratory dinner</strong>
+              <div class="detail">Carmine's (huge family-style Italian, theater district) or Gallaghers Steakhouse (since 1927). <strong>Book ahead.</strong></div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">23:00</div>
+            <div class="schedule-event">
+              <strong>Walk back to hotel</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-meta">
+          <h4>Backup &amp; Notes</h4>
+          <p>This is your last real night. Make the dinner count. <strong>Book the restaurant 2–3 weeks ahead.</strong> Stadium roof keeps you dry in rain.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== DAY 11 ===== -->
+    <div class="day" id="day11">
+      <div class="day-header">
+        <div class="day-number">11</div>
+        <div class="day-info">
+          <div class="day-date">Sunday · June 28</div>
+          <div class="day-theme">Last Bagel.</div>
+        </div>
+      </div>
+      <div class="day-content">
+        <div class="schedule">
+          <div class="schedule-row">
+            <div class="schedule-time">08:00</div>
+            <div class="schedule-event">
+              <strong>Best Bagel &amp; Coffee · W 35th St</strong>
+              <div class="detail">Around the corner. Everything bagel + cream cheese + lox. Authentic NY bagel.</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">09:00</div>
+            <div class="schedule-event">
+              <strong>Last walk</strong>
+              <div class="detail">Times Square souvenirs OR short Central Park visit (B/D train, 10 min).</div>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">10:30</div>
+            <div class="schedule-event">
+              <strong>Pack, check out</strong>
+            </div>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-time">11:00</div>
+            <div class="schedule-event">
+              <strong>Uber/taxi to airport</strong>
+              <div class="detail">EWR: 30–50 min, $60–80 · JFK: 60–90 min, $70–100. Allow 3 hours before international flight.</div>
+            </div>
+          </div>
+        </div>
+        <div class="day-meta">
+          <h4>Backup &amp; Notes</h4>
+          <p>If you have a late afternoon flight, squeeze in one more activity. Otherwise, just enjoy the morning.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============ BUDGET ============ -->
+  <section id="budget">
+    <h2 class="section-title">
+      <span class="num">§ 03 · BUDGET</span>
+      The Numbers.
+    </h2>
+    <p class="section-intro">Estimates for 2 people, in USD. Excludes hotel, flights, and FIFA match tickets (which you already have). Add 10–15% buffer for spontaneous spending.</p>
+
+    <table class="budget-table">
+      <tbody>
+        <tr><td>Pre-purchased tickets (observation decks, museums, activities)</td><td>$1,250</td></tr>
+        <tr><td>Boxing, archery, ax, go-karting, mini-golf, bowling, kayaking</td><td>$400</td></tr>
+        <tr><td>Chelsea Piers walk-in activities</td><td>$80</td></tr>
+        <tr><td>Central Park bike rental</td><td>$50</td></tr>
+        <tr><td>JFK round-trip taxis</td><td>$190</td></tr>
+        <tr><td>NJ Transit FIFA train tickets (both matches, 2 people)</td><td>$392</td></tr>
+        <tr><td>Subway &amp; Ubers across 10 days</td><td>$250</td></tr>
+        <tr><td>Food · 10 days · ~$130/day for two</td><td>$1,300</td></tr>
+        <tr><td>Tipping · ~$30/day</td><td>$300</td></tr>
+        <tr><td>Souvenirs &amp; miscellaneous</td><td>$400</td></tr>
+        <tr class="total"><td>Total estimate</td><td>~$4,600</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ============ BACKUPS ============ -->
+  <section id="backups">
+    <h2 class="section-title">
+      <span class="num">§ 04 · BACKUPS</span>
+      If It Rains.
+    </h2>
+    <p class="section-intro">Activities to swap in for rain, fatigue, or canceled plans. None require advance booking unless noted.</p>
+
+    <div class="backups">
+      <div class="backup-card">
+        <h4>Dave &amp; Buster's Arcade</h4>
+        <div class="when">Times Square · 3 blocks from hotel</div>
+        <div class="cost">$30–50/person · 1–3 hrs · Any evening</div>
+      </div>
+      <div class="backup-card">
+        <h4>Balloon Museum</h4>
+        <div class="when">South Street Seaport · Check open status</div>
+        <div class="cost">~$45/person · 90 min · balloonmuseum.world</div>
+      </div>
+      <div class="backup-card">
+        <h4>Coney Island full day</h4>
+        <div class="when">Brooklyn · 1 hr each way</div>
+        <div class="cost">$60 wristband · Cyclone, Wonder Wheel, Nathan's</div>
+      </div>
+      <div class="backup-card">
+        <h4>Second iFLY session</h4>
+        <div class="when">Queens · If first was a hit</div>
+        <div class="cost">~$90/person · Solo flight</div>
+      </div>
+      <div class="backup-card">
+        <h4>Hudson Yards · The Vessel</h4>
+        <div class="when">Walk west · Light evening</div>
+        <div class="cost">Free to view · Plus food hall</div>
+      </div>
+      <div class="backup-card">
+        <h4>Frames Bowling repeat</h4>
+        <div class="when">3 blocks from hotel · Late evening</div>
+        <div class="cost">~$15/game · Walk-in</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REFERENCE ============ -->
+  <section id="reference">
+    <h2 class="section-title">
+      <span class="num">§ 05 · QUICK REFERENCE</span>
+      Things to Know.
+    </h2>
+
+    <div class="reference">
+
+      <div class="ref-card">
+        <h4>Subway</h4>
+        <p>Tap your contactless credit card or phone (Apple Pay / Google Pay) on the OMNY reader at any turnstile.</p>
+        <p><strong>$2.90 per ride</strong>, automatically capped at $34/week per card.</p>
+        <p>One card per person — don't share.</p>
+      </div>
+
+      <div class="ref-card">
+        <h4>Tipping</h4>
+        <p><strong>Restaurants:</strong> 18–20% on pre-tax total. Not optional.</p>
+        <p><strong>Taxis &amp; Uber:</strong> 15%.</p>
+        <p><strong>Hotel housekeeping:</strong> $3–5/day in cash on the pillow.</p>
+        <p><strong>Bellhop:</strong> $2/bag.</p>
+      </div>
+
+      <div class="ref-card">
+        <h4>Matchday Rules</h4>
+        <p><strong>Clear bag policy strict.</strong> Bring nothing or only a small clear plastic bag.</p>
+        <p><strong>Penn Station ONLY</strong> for NYC fans to MetLife.</p>
+        <p>Show NJ Transit mobile ticket at boarding gate. Both legs are pre-purchased.</p>
+      </div>
+
+      <div class="ref-card">
+        <h4>JFK ↔ Hotel</h4>
+        <p><strong>Yellow taxi flat rate $70</strong> from JFK + ~$7 tolls + 20% tip = <span class="mono">~$95</span></p>
+        <p>No surge. No app needed. Just go to the official taxi line outside the terminal.</p>
+        <p>For return trip, Uber works fine.</p>
+      </div>
+
+      <div class="ref-card">
+        <h4>Weather</h4>
+        <p><strong>Late June: 27–32°C, humid.</strong> Occasional afternoon thunderstorms (intense but brief).</p>
+        <p>Pack light clothes, comfortable walking shoes, light rain layer, hat, sunscreen.</p>
+        <p>AC breaks 1–4 PM are smart.</p>
+      </div>
+
+      <div class="ref-card">
+        <h4>Money &amp; Cards</h4>
+        <p>Credit cards accepted everywhere. Bring ~$200 cash for tips and small things.</p>
+        <p><strong>Call your card company</strong> to flag US travel June 18–28.</p>
+        <p>For US billing forms, use your Israeli home address (matches the card).</p>
+      </div>
+
+      <div class="ref-card">
+        <h4>Emergency</h4>
+        <p><strong>911</strong> · Police, fire, ambulance.</p>
+        <p><strong>Israeli Consulate NYC:</strong> 800 2nd Ave, +1-212-499-5000</p>
+        <p><strong>Lost passport:</strong> Contact consulate immediately, allow extra time before flying home.</p>
+      </div>
+
+      <div class="ref-card">
+        <h4>Hell's Kitchen Quick Eats</h4>
+        <p><strong>Totto Ramen</strong> · W 52nd · Japanese ramen</p>
+        <p><strong>Los Tacos No. 1</strong> · Various · Tacos</p>
+        <p><strong>Sarabeth's</strong> · W 50th · Brunch classic</p>
+        <p><strong>Halal Guys</strong> · 53rd &amp; 6th · Late night legend</p>
+        <p><strong>Best Bagel &amp; Coffee</strong> · W 35th · Last morning bagel</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="stamp">Mazel Tov</div>
+    <p>Plan it well. Travel light. Remember everything.</p>
+  </footer>
+
+</div>
+
+<script>
+  // Persist checkbox state in localStorage... wait, this is for hosting on GitHub
+  // localStorage is fine for this use case (not inside Claude artifact constraints)
+  // But to keep it portable, let's skip localStorage entirely.
+  // The user can just tick them as they go.
+
+  // Smooth nav highlight on scroll
+  const days = document.querySelectorAll('.day, section[id]');
+  const navLinks = document.querySelectorAll('nav.daynav a');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navLinks.forEach(link => {
+          const isActive = link.getAttribute('href') === '#' + id;
+          link.style.background = isActive ? 'var(--ink)' : '';
+          link.style.color = isActive ? 'var(--paper)' : '';
+        });
+      }
+    });
+  }, { rootMargin: '-40% 0px -50% 0px' });
+
+  days.forEach(day => observer.observe(day));
+</script>
+
+</body>
+</html>
