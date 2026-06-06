@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 <style>
   :root {
     --paper: #F4EEE2;
@@ -579,6 +580,91 @@
     section { padding: 24px 0; }
   }
 
+  /* ============ MAP ============ */
+  #map-canvas {
+    height: 540px;
+    width: 100%;
+    margin-top: 24px;
+    border: 2px solid var(--ink);
+    border-radius: 4px;
+    background: var(--paper-deep);
+    z-index: 2;
+  }
+  #map-canvas .leaflet-container {
+    font-family: var(--body);
+    background: var(--paper-deep);
+  }
+  .leaflet-popup-content-wrapper {
+    border-radius: 4px;
+    background: var(--paper);
+    color: var(--ink);
+    box-shadow: 0 6px 24px rgba(14,26,36,0.25);
+  }
+  .leaflet-popup-content { margin: 14px 16px; line-height: 1.45; }
+  .leaflet-popup-content .pop-cat {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-bottom: 4px;
+  }
+  .leaflet-popup-content .pop-name {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.15;
+    margin-bottom: 4px;
+  }
+  .leaflet-popup-content .pop-note {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+  }
+  .leaflet-popup-content a.pop-link {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--blue);
+    text-decoration: none;
+    border-bottom: 1px solid var(--blue);
+  }
+  .leaflet-popup-tip { background: var(--paper); }
+  .map-pin {
+    border-radius: 50%;
+    border: 2px solid var(--paper);
+    box-shadow: 0 1px 4px rgba(14,26,36,0.4);
+  }
+  .map-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    margin-top: 20px;
+    padding: 18px 20px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+  }
+  .map-legend .leg {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .map-legend .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--paper);
+    box-shadow: 0 1px 3px rgba(14,26,36,0.35);
+    flex-shrink: 0;
+  }
+
   /* small decorative touches */
   .divider-ornament {
     text-align: center;
@@ -606,6 +692,7 @@
     <a href="#day9">D9·Karts</a>
     <a href="#day10" class="match">D10·Match 2</a>
     <a href="#day11">D11·Depart</a>
+    <a href="#map">Map</a>
     <a href="#budget">$</a>
     <a href="#backups">Backup</a>
     <a href="#reference">Ref</a>
@@ -1566,10 +1653,30 @@
 
   </section>
 
+  <!-- ============ MAP ============ -->
+  <section id="map">
+    <h2 class="section-title">
+      <span class="num">§ 03 · THE MAP</span>
+      Where It All Is.
+    </h2>
+    <p class="section-intro">Every venue from the itinerary, pinned. Tap a marker for a quick note and a one-tap link that opens directions in your phone's map app.</p>
+
+    <div id="map-canvas"></div>
+
+    <div class="map-legend">
+      <div class="leg"><span class="dot" style="background:#1B3A7B"></span> Base</div>
+      <div class="leg"><span class="dot" style="background:#C84A2E"></span> Matchday</div>
+      <div class="leg"><span class="dot" style="background:#0E1A24"></span> Sights &amp; Views</div>
+      <div class="leg"><span class="dot" style="background:#2D6A4F"></span> Activities</div>
+      <div class="leg"><span class="dot" style="background:#B8862F"></span> Food</div>
+      <div class="leg"><span class="dot" style="background:#7B8590"></span> Transport</div>
+    </div>
+  </section>
+
   <!-- ============ BUDGET ============ -->
   <section id="budget">
     <h2 class="section-title">
-      <span class="num">§ 03 · BUDGET</span>
+      <span class="num">§ 04 · BUDGET</span>
       The Numbers.
     </h2>
     <p class="section-intro">Estimates for 2 people, in USD. Excludes hotel, flights, and FIFA match tickets (which you already have). Add 10–15% buffer for spontaneous spending.</p>
@@ -1594,7 +1701,7 @@
   <!-- ============ BACKUPS ============ -->
   <section id="backups">
     <h2 class="section-title">
-      <span class="num">§ 04 · BACKUPS</span>
+      <span class="num">§ 05 · BACKUPS</span>
       If It Rains.
     </h2>
     <p class="section-intro">Activities to swap in for rain, fatigue, or canceled plans. None require advance booking unless noted.</p>
@@ -1636,7 +1743,7 @@
   <!-- ============ REFERENCE ============ -->
   <section id="reference">
     <h2 class="section-title">
-      <span class="num">§ 05 · QUICK REFERENCE</span>
+      <span class="num">§ 06 · QUICK REFERENCE</span>
       Things to Know.
     </h2>
 
@@ -1737,6 +1844,93 @@
   }, { rootMargin: '-40% 0px -50% 0px' });
 
   days.forEach(day => observer.observe(day));
+</script>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+  // ===== Itinerary map =====
+  // cat: base | match | view | activity | food | transport
+  const CAT_COLOR = {
+    base: '#1B3A7B',
+    match: '#C84A2E',
+    view: '#0E1A24',
+    activity: '#2D6A4F',
+    food: '#B8862F',
+    transport: '#7B8590'
+  };
+  const CAT_LABEL = {
+    base: 'Base', match: 'Matchday', view: 'Sight / View',
+    activity: 'Activity', food: 'Food', transport: 'Transport'
+  };
+
+  // [name, lat, lng, category, note]
+  const LOCATIONS = [
+    ['Base — 338 W 36th St', 40.7531, -73.9928, 'base', "Hell's Kitchen home for 10 nights."],
+    ['MetLife Stadium', 40.8135, -74.0745, 'match', 'Both World Cup matches. Train via Penn → Secaucus.'],
+    ['Penn Station', 40.7506, -73.9935, 'transport', 'NJ Transit to MetLife. 4 blocks south of base.'],
+    ['JFK Airport', 40.6413, -73.7781, 'transport', 'Arrival. Yellow cab flat $70 to Manhattan.'],
+    ['Newark (EWR) Airport', 40.6895, -74.1745, 'transport', 'Possible departure airport.'],
+    ['9/11 Memorial & Museum', 40.7115, -74.0125, 'view', 'Day 2. Timed entry, ~$33pp.'],
+    ['One World Observatory', 40.7127, -74.0133, 'view', 'Day 2 afternoon. Tallest in the hemisphere.'],
+    ['Eataly Downtown', 40.7117, -74.0113, 'food', 'Day 2 lunch — Italian food hall.'],
+    ['Stone Street', 40.7043, -74.0110, 'view', 'Day 2 — pedestrian old street, photo stop.'],
+    ['Pier 26 — Free Kayaking', 40.7205, -74.0135, 'activity', 'Day 3 morning. Walk-up, weekends only.'],
+    ['Columbus Circle — Bike Rental', 40.7681, -73.9819, 'view', 'Day 3 — bikes into Central Park.'],
+    ['Central Park — Bethesda Fountain', 40.7739, -73.9710, 'view', 'Day 3 — ~10km loop.'],
+    ['Top of the Rock', 40.7587, -73.9787, 'view', 'Day 3 — sunset slot ~7 PM.'],
+    ['iFLY Indoor Skydiving (LIC)', 40.7430, -73.9490, 'activity', 'Day 4 — 11 AM, ~$90pp.'],
+    ['Chelsea Piers', 40.7470, -74.0090, 'activity', 'Day 4 — golf range, batting cages, climbing.'],
+    ['SUMMIT One Vanderbilt', 40.7527, -73.9785, 'view', 'Day 5 — newest observation deck.'],
+    ['Intrepid Sea, Air & Space Museum', 40.7645, -74.0009, 'view', 'Day 6 — aircraft carrier at Pier 86.'],
+    ['Mendez Boxing', 40.7459, -73.9929, 'activity', 'Day 7 — 75-min drop-in class.'],
+    ['Chelsea Market', 40.7424, -74.0061, 'food', 'Day 7 lunch — food hall.'],
+    ['Empire State Building', 40.7484, -73.9857, 'view', 'Day 7 evening — 86th + 102nd combo.'],
+    ['Gotham Archery (Brooklyn)', 40.6759, -73.9897, 'activity', 'Day 8 — 1-hour intro, ~$30pp.'],
+    ["Lombardi's Pizza", 40.7216, -73.9956, 'food', 'Day 8 — oldest pizzeria in America (1905).'],
+    ['Live Axe', 40.7196, -73.9986, 'activity', 'Day 8 — ax throwing on Lafayette St.'],
+    ['RPM Raceway (Jersey City)', 40.7282, -74.0345, 'activity', 'Day 9 — indoor go-karting.'],
+    ['Pier 25 — Mini-Golf', 40.7195, -74.0125, 'activity', 'Day 9 — free, Hudson River Park.'],
+    ['Frames Bowling', 40.7565, -73.9925, 'activity', 'Day 9 night — 3 blocks from base.'],
+    ['Times Square', 40.7580, -73.9855, 'view', 'Day 10 / souvenirs.'],
+    ["Carmine's", 40.7574, -73.9874, 'food', 'Day 10 — celebratory family-style dinner.'],
+    ['Best Bagel & Coffee', 40.7522, -73.9905, 'food', 'Day 11 — last-morning bagel on W 35th.'],
+    ['Halal Guys (53rd & 6th)', 40.7617, -73.9787, 'food', 'Late-night legend, open till 3 AM.'],
+    ['The Vessel — Hudson Yards', 40.7538, -74.0021, 'view', 'Backup — free to view, food hall.'],
+    ["Dave & Buster's", 40.7565, -73.9890, 'activity', 'Rain backup — Times Square arcade.'],
+    ['Coney Island', 40.5755, -73.9707, 'activity', 'Backup — Cyclone, Wonder Wheel, Nathan’s.']
+  ];
+
+  function pinIcon(cat) {
+    return L.divIcon({
+      className: '',
+      html: '<div class="map-pin" style="width:16px;height:16px;background:' + (CAT_COLOR[cat] || '#0E1A24') + '"></div>',
+      iconSize: [16, 16],
+      iconAnchor: [8, 8],
+      popupAnchor: [0, -8]
+    });
+  }
+
+  const map = L.map('map-canvas', { scrollWheelZoom: false });
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 19
+  }).addTo(map);
+
+  const group = L.featureGroup().addTo(map);
+  LOCATIONS.forEach(([name, lat, lng, cat, note]) => {
+    const q = encodeURIComponent(name.replace(/\s—.*$/, '').replace(/\s\(.*\)$/, '') + ', New York');
+    const link = 'https://www.google.com/maps/search/?api=1&query=' + q;
+    const html =
+      '<div class="pop-cat">' + (CAT_LABEL[cat] || '') + '</div>' +
+      '<div class="pop-name">' + name + '</div>' +
+      (note ? '<div class="pop-note">' + note + '</div>' : '') +
+      '<a class="pop-link" href="' + link + '" target="_blank" rel="noopener">Open in Maps &rarr;</a>';
+    L.marker([lat, lng], { icon: pinIcon(cat), title: name }).addTo(group).bindPopup(html);
+  });
+
+  map.fitBounds(group.getBounds().pad(0.12));
+  map.on('click', () => { if (!map.scrollWheelZoom.enabled()) map.scrollWheelZoom.enable(); });
 </script>
 
 </body>
